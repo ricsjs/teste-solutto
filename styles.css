@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 512px;
+    height: auto;
+}
+
+.avatar-svg {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 48px;
+    height: 48px;
+}
+
+.avatar-svg img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 256px;
+    }
+}
