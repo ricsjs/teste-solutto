@@ -9,7 +9,7 @@ function initialize(){
 
     async function triggerAudio() {
         try {
-            var audio = new Audio("https://b.mokaly.com/audios/matrix_room_enter.mp3");
+            const audio = new Audio("https://b.mokaly.com/audios/matrix_room_enter.mp3");
             await audio.play();
             console.log("Áudio tocando");
         } catch (err) {
@@ -19,22 +19,14 @@ function initialize(){
     }
 
     function renderButton() {
-        if (document.getElementById('button') == null) {
-            let div = document.createElement('div');
-            div.classList.add('button');
-            div.setAttribute('id', 'button');
-            let button = document.createElement('button');
-            let text = document.createTextNode('Repetir animação');
-            button.appendChild(text);
-            div.appendChild(button);
-            document.querySelector(".main").appendChild(div);
-
-            document.getElementById('button').addEventListener('click', launchAvatars);
-        } else {
-            document.getElementById('button').classList.remove('hide');
-            document.getElementById('button').classList.add('show');
+        const buttonDiv = document.getElementById('button');
+        
+        if (buttonDiv) {
+            buttonDiv.classList.remove('hide');
+            buttonDiv.classList.add('show');
+            buttonDiv.querySelector('button').addEventListener('click', launchAvatars);
         }
-    }
+    }    
 
     function launchAvatars() {
         const button = document.querySelector('#button');
@@ -43,6 +35,7 @@ function initialize(){
         }
 
         const avatars = document.querySelectorAll('.avatar-svg');
+
         let currentAvatar = avatars.length - 1;
 
         const animateInterval = setInterval(() => {
