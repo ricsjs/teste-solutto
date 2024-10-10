@@ -34,7 +34,7 @@ function initialize(){
             button.classList.add('hide');
         }
 
-        const avatars = document.querySelectorAll('.avatar-svg');
+        const avatars = document.querySelectorAll('.avatar-cup');
 
         let currentAvatar = avatars.length - 1;
 
