@@ -50,7 +50,7 @@ function initialize(){
                 avatars[currentAvatar + 1].classList.remove('active');
             }
 
-            const randomPosition = (Math.random() * 80) + "vw";
+            const randomPosition = (Math.random() * 90) + "vw";
             avatars[currentAvatar].style.left = randomPosition;
             avatars[currentAvatar].classList.add('active', 'fly-in');
 
